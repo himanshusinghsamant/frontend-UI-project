@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@600&family=Ubuntu:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  position: relative;
+}
+.navbar {
+  font-family: "Bubblegum Sans", cursive;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  width: 200px;
+  height: 100vh;
+  background-color: #205f40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.navbar img {
+  width: 45%;
+  margin-top: 20px;
+}
+.mobile-hamburger {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  color: rgb(96, 208, 228);
+  font-size: 1.5rem;
+  z-index: 200;
+  display: none;
+  cursor: pointer;
+}
+.nav-close {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+.navbar li {
+  margin-top: 2rem;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: rgb(243, 247, 213);
+}
+.navbar a {
+  color: rgb(243, 247, 213);
+  text-decoration: none;
+}
+.navbar li:hover {
+  text-shadow: 50px 15px #319161;
+  transition: 0.5s ease-in-out;
+}
+
+.home-section {
+  background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Photos-Download-Starbucks-Backgrounds.jpg);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: rgb(43, 41, 41);
+  width: 100%;
+  height: 100vh;
+  opacity: 0.4;
+}
+.container-txt {
+  width: 40%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+}
+
+.container-txt h1 {
+  font-size: 3rem;
+  position: relative;
+  left: -170%;
+  overflow: hidden;
+  animation: anim1 2s forwards 0.6s;
+}
+
+@keyframes anim1 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.container-txt p {
+  font-size: 2rem;
+  margin-top: 20px;
+  position: relative;
+  left: -170%;
+  overflow: hidden;
+  animation: anim2 2s forwards 0.9s;
+}
+
+@keyframes anim2 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.container-txt button {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #205f40;
+  color: white;
+}
+.container-txt button:hover {
+  background-color: #319161;
+  color: burlywood;
+  transition: 0.4s;
+}
+
+@media (min-width:415px) and (max-width:900px) {
+  body{
+    position: relative;
+  }
+  .mobile-hamburger {
+    display: initial;
+  }
+  .nav-close {
+    display: initial;
+  }
+  .navbar {
+    position: fixed;
+    left: -200px;
+    /* top: 0px; */
+  }
+  .navbar.active {
+    left: 0px;
+    transition: 0.5s;
+   
+  }
+  .container-txt {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 414px) {
+  body {
+    position: relative;
+  }
+  .mobile-hamburger {
+    display: initial;
+  }
+  .nav-close {
+    display: initial;
+  }
+  .navbar {
+    position: fixed;
+    left: -200px;
+    top: 0px;
+  }
+  .navbar.active {
+    left: 0px;
+    transition: 0.5s;
+
+  }
+  .container-txt {
+    width: 80%;
+  }
+}
